@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> django-angular-jwt seed</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{% static 'app/favicon.ico' %}">
+
+    <link href="{% static 'app/styles.bundle.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<app-root> Loading...</app-root>
+
+<script type="text/javascript" src="{% static 'app/inline.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/polyfills.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/main.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/0.chunk.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/1.chunk.js' %}"></script>
+</body>
+</html>
