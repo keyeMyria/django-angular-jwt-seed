@@ -280,6 +280,3 @@ venv.bak/
 #--------------------- Project.gitignore ---------------------
 #static-root/
 media-root/
-!backend/src/apps/wireless/lib/
-!backend/src/apps/wireless/lib/
-!backend/src/addons/
