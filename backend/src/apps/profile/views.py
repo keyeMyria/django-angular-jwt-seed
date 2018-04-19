@@ -1,15 +1,12 @@
-from rest_framework import viewsets, views, generics
+import logging
+
+from rest_framework import viewsets
 from rest_framework.response import Response
 
-from profile_module.permissions import (
-    IsAuthenticated,
-    SessionAuthentication,
-    BasicAuthentication,
-    JSONWebTokenAuthentication,
-    IsOwnerOnly
+from apps.profile.permissions import (
+    JSONWebTokenAuthentication
 )
 from .serializers import ProfileSerializer
-import logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

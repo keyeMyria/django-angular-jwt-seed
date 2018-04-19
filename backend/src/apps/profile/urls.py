@@ -1,6 +1,6 @@
 from rest_framework import routers
 
-from profile_module import views
+from apps.profile import views
 
 router = routers.DefaultRouter()
 router.register(

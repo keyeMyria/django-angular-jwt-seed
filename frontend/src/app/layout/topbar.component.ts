@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {Router} from '@angular/router';
-import {AuthenticationService} from '../authentication';
 
 @Component({
   selector: 'app-top-bar',

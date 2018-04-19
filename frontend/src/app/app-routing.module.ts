@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {Error404Component} from './errors/404.component';
 import {Error500Component} from './errors/500.component';
 
-import {PublicGuard, ProtectedGuard} from 'ngx-auth';
+import {ProtectedGuard, PublicGuard} from 'ngx-auth';
 
 const AppRoutes: Routes = [
   {

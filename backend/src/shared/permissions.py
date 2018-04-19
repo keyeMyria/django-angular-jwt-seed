@@ -1,7 +1,4 @@
 from rest_framework import permissions
-from rest_framework.permissions import IsAuthenticated, AllowAny
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
 class IsOwnerOnly(permissions.BasePermission):

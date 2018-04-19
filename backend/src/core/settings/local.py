@@ -10,22 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os
 import datetime
+import os
+
 from .database import db_name, db_password, db_user_name
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PROJECT_ROOT_DIR = os.path.dirname((os.path.dirname(BASE_DIR)))
 
-BASE_LOG_DIR = os.path.join(BASE_DIR, 'logs')
-BASE_DEBUG_FILE_PATH = os.path.join(
-    BASE_LOG_DIR,
-    'debug.log'
-)
-BASE_MAIN_FILE_PATH = os.path.join(
-    BASE_LOG_DIR,
-    'main.log'
-)
+BASE_LOG_DIR = os.path.join(PROJECT_ROOT_DIR, 'logs')
+BASE_DEBUG_FILE_PATH = os.path.join(BASE_LOG_DIR, 'debug.log')
+BASE_MAIN_FILE_PATH = os.path.join(BASE_LOG_DIR, 'main.log')
 
 if not os.path.exists(BASE_LOG_DIR):
     os.makedirs(BASE_LOG_DIR)
@@ -58,8 +53,8 @@ INSTALLED_APPS = [
 PROJECT_APPS = [
     'rest_framework',
     'corsheaders',
-    'profile_module',
-    'shared_module',
+    'profile',
+    'shared',
 
 ]
 INSTALLED_APPS = INSTALLED_APPS + PROJECT_APPS
@@ -75,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'control_module.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -94,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'control_module.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases

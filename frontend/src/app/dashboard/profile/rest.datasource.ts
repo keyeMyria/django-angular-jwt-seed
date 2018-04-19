@@ -1,5 +1,5 @@
-import {Injectable, Inject, InjectionToken} from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams, HttpRequest, HttpResponse} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
 import 'rxjs/add/operator/map';

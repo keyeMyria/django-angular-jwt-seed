@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
 import {ProfileRestDataSource} from './rest.datasource';
 import {UserProfile} from './profile.model';
 
