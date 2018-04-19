@@ -53,8 +53,8 @@ INSTALLED_APPS = [
 PROJECT_APPS = [
     'rest_framework',
     'corsheaders',
-    'profile',
     'shared',
+    'apps.profile',
 
 ]
 INSTALLED_APPS = INSTALLED_APPS + PROJECT_APPS
@@ -126,6 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -136,19 +137,27 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
 DATE_FORMAT = '%H:%M:%S %d/%m/%Y'
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = "static"
+
 STATICFILES_DIRS = [
-    os.path.join(os.path.dirname(BASE_DIR), 'static-root')
+    os.path.join(PROJECT_ROOT_DIR, 'static-root')
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media-root")
+MEDIA_ROOT = os.path.join(PROJECT_ROOT_DIR, "media-root")
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
 
 # django rest
 REST_FRAMEWORK = {
@@ -201,22 +210,6 @@ JWT_AUTH = {
     'JWT_AUTH_COOKIE': None,
 
 }
-
-CORS_ORIGIN_WHITELIST = (
-    'localhost:8000',
-    'localhost:4200',
-    '192.168.0.108:4200',
-    '127.0.0.1:9000'
-)
-
-CORS_ALLOW_METHODS = (
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-)
 
 LOGGING = {
     'version': 1,

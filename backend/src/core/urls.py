@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.views.generic.base import TemplateView
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
 
@@ -16,7 +16,8 @@ urlpatterns = [
 
 urlpatterns += [
 
-    path('', TemplateView.as_view(template_name='index.html'), name='dashboard'),
+    re_path(r'^.*', TemplateView.as_view(template_name='index.html'), name='dashboard'),
+
 
 ]
 
