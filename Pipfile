@@ -1,0 +1,39 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+netaddr = "*"
+djangorestframework = "*"
+djangorestframework-jwt = "*"
+django-cors-headers = "*"
+django-filter = "*"
+drf-extensions = "*"
+channels = "*"
+celery = "*"
+psutil = "*"
+bs4 = "*"
+pyric = "*"
+scapy = "*"
+mitmproxy = "*"
+service_identity = "*"
+channels_redis = "*"
+django_celery_beat = "*"
+django_celery_results = "*"
+twisted = {extras = ["http2", "tls"]}
+psycopg2 = "*"
+psycopg2-binary = "*"
+gpiozero = "*"
+netifaces = "*"
+pylint = "*"
+flake8 = "*"
+coverage = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
+
+[scripts]

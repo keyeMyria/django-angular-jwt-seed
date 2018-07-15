@@ -1,0 +1,23 @@
+<div *ngIf="is_login; else LoginContainer">
+  <clr-main-container >
+  <app-header-component></app-header-component>
+
+
+  <div class="content-container">
+
+    <app-sidenav-component></app-sidenav-component>
+
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+</clr-main-container>
+</div>
+
+<ng-template #LoginContainer>
+  <router-outlet></router-outlet>
+</ng-template>
+
+

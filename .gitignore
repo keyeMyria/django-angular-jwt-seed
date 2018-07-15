@@ -278,5 +278,6 @@ venv.bak/
 
 
 #--------------------- Project.gitignore ---------------------
-#static-root/
 media-root/
+static-root/
+Pipfile.lock

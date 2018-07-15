@@ -1,0 +1,98 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.flex-container > * {
+  width: 100%;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+.list-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Structure */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.list-table {
+  flex: 1 1 auto;
+  overflow: auto;
+  max-height: 500px;
+}
+
+.list-header-row, .list-row {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  height: 32px;
+  padding: 0 8px;
+}
+
+.list-cell, .list-header-cell {
+  flex: 1;
+}
+
+.list-header-cell {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.list-cell {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.form {
+  min-height: 56px;
+  max-height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 8px 24px 0;
+  font-size: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  flex-grow: 1;
+  margin-top: 8px;
+}
+
+.cdk-column-id {
+  flex: 0 0 100px;
+}
+
+.mat-progress-bar {
+  /*display: inline;        !* Default of all elements, unless UA stylesheet overrides *!*/
+  display: inline-block; /* Characteristics of block, but sits on a line */
+  width: 50%;
+}
+
+body {
+  margin: 0;
+}
+
+.project-card {
+  margin: 15px;
+  max-width: 300px;
+}

@@ -1,15 +1,24 @@
 # django-angular-jwt-seed
-seed project for angular, django, jwt
+seed project for angular, django, jwt:
+
+###Django addons list:
+-   'rest_framework'
+-   'django_filters'
+-   'django_celery_results'
+-   'django_celery_beat'
+-   'corsheaders'
+-   'channels'
+
+###Angular addons list:
+- clr/angular
+- clr/icons
+- clr/ui
+- angular/material
+
+## Login:
+
+![alt text](docs/login.png)
 
 
-- build backend (create virtualenv + install requirements.txt):
-```python
-    chmod +x django-angular-jwt-seed/backend/build.sh && django-angular-jwt-seed/backend/build.sh
-```
-- build frontend:
-```python
-    cd django-angular-jwt-seed/frontend/ && yarn install
-```
-```python
-    chmod +x django-angular-jwt-seed/frontend/build.sh && django-angular-jwt-seed/frontend/build.sh
-```
+## Dashboard:
+![alt text](docs/dashboard.png)

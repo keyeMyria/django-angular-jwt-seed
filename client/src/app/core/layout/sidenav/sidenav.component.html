@@ -1,0 +1,24 @@
+<clr-vertical-nav
+  [clrVerticalNavCollapsible]="true"
+  [(clrVerticalNavCollapsed)]="collapsed"
+>
+  <clr-vertical-nav-group
+    *ngFor="let group of sideMenu$ | async"
+    routerLinkActive="active">
+    <clr-icon
+      [attr.shape]="group.group_icon"
+      clrVerticalNavIcon>
+    </clr-icon>
+    {{ group.group_name }}
+    <clr-vertical-nav-group-children *ngFor=" let item of group.group_list">
+      <a clrVerticalNavLink
+         routerLink="{{ item.route }}"
+         routerLinkActive="active">
+        <clr-icon
+          [attr.shape]="item.icon">
+        </clr-icon>
+        {{ item.name }}
+      </a>
+    </clr-vertical-nav-group-children>
+  </clr-vertical-nav-group>
+</clr-vertical-nav>
