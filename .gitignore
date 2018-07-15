@@ -278,6 +278,7 @@ venv.bak/
 
 
 #--------------------- Project.gitignore ---------------------
+.djangoSeed
 media-root/
 static-root/
 Pipfile.lock
